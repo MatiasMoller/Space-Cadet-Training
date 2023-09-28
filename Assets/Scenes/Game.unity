@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 491589007}
   - component: {fileID: 491589006}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: GameTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,11 +812,6 @@ MonoBehaviour:
     m_Bits: 128
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   text: {fileID: 255964844}
---- !u!1 &915818804 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 234814306978143066, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
-  m_PrefabInstance: {fileID: 866648587236302368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1019348859 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1199998819727573594, guid: b51dfd6c71d516247aedbb726dbacbb1, type: 3}
@@ -1296,11 +1291,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2414367178140939627, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852182132522380015, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154135705936563988, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1590495001}
     - target: {fileID: 6619038445670778084, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
       propertyPath: m_Name
       value: Range01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6863244802519361081, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052053908584777340, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1590495001}
+    m_RemovedComponents:
+    - {fileID: 6863244802519361081, guid: 3fb1ec1656a262d42913fc5169a901c0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1445,6 +1461,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 836957436}
     m_Modifications:
+    - target: {fileID: 1057933758038986082, guid: 9b08da6b43098db4588dfa6bddfb463f, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1590495001}
     - target: {fileID: 5280231413478324122, guid: 9b08da6b43098db4588dfa6bddfb463f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.75
@@ -1492,7 +1512,11 @@ PrefabInstance:
     - target: {fileID: 8218924742922423035, guid: 9b08da6b43098db4588dfa6bddfb463f, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 915818804}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690915382127466125, guid: 9b08da6b43098db4588dfa6bddfb463f, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1590495001}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1632,6 +1656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 3166876490715034980, guid: a7e23bea5ddba124ead4e75ccf0065ee, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1590495001}
     - target: {fileID: 7980921853193653967, guid: a7e23bea5ddba124ead4e75ccf0065ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

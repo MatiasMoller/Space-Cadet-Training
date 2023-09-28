@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class GameTimer : MonoBehaviour
 {
     [Header ("Component")]
     public TextMeshProUGUI timerText;
@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     public float timerLimit;
 
     [Header("Control Settings")]
-    public bool isPaused = false;
+    public bool isPaused = true;
 
     [Header("Format Settings")]
     public bool hasFormat;
