@@ -59,7 +59,6 @@ public class GameTimer : MonoBehaviour
             }
         }
             SetTimerText();
-
     }
     private void SetTimerText()
     {
@@ -67,10 +66,12 @@ public class GameTimer : MonoBehaviour
         if (hasFormat)
         {
             timerText.text = currentTime.ToString(timeFormats[format]);
+            Debug.Log("Run Time: " + currentTime.ToString(timeFormats[format]));
         }
         else
         {
             timerText.text = currentTime.ToString();
+            Debug.Log("Run Time: " + currentTime.ToString());
         }
     }
 

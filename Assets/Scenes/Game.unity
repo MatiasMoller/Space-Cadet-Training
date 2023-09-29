@@ -240,8 +240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 792.38635, y: -449.81995}
-  m_SizeDelta: {x: 335.2273, y: 180.3601}
+  m_AnchoredPosition: {x: 450, y: -300}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255964844
 MonoBehaviour:
@@ -290,8 +290,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
-  m_fontSizeBase: 75
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -479,6 +479,23 @@ TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 2536114498526267132, guid: 390d7adac7d668448bffdd89fbfe04a4, type: 3}
   m_PrefabInstance: {fileID: 6524987322426458810}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &437489551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5132857759978485299, guid: e111f005986ca804fa8b2a3a04f70a29, type: 3}
+  m_PrefabInstance: {fileID: 7839971431395247637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &437489555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437489551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee21d5e975257145a46986dc06fde2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &448166949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5739914645342586107, guid: e111f005986ca804fa8b2a3a04f70a29, type: 3}
@@ -1642,7 +1659,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5132857759978485299, guid: e111f005986ca804fa8b2a3a04f70a29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437489555}
   m_SourcePrefab: {fileID: 100100000, guid: e111f005986ca804fa8b2a3a04f70a29, type: 3}
 --- !u!1001 &7868121653598988084
 PrefabInstance:
