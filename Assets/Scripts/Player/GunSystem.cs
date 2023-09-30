@@ -7,15 +7,19 @@ using System.Collections;
 public class GunSystem : MonoBehaviour
 {
     //Gun stats
-    public int damage;
+    public float damage = 5f;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
+    
+
+  
 
     [SerializeField] private ParticleSystem ImpactParticleSystem;
     [SerializeField] private TrailRenderer BulletTrail;
     [SerializeField] private ParticleSystem ShootingSystem;
+    [SerializeField] private ParticleSystem muzzleFlash;
 
     //bools 
     bool shooting, readyToShoot, reloading;
@@ -28,6 +32,7 @@ public class GunSystem : MonoBehaviour
 
     //Graphics
     public GameObject  bulletHoleGraphic;
+    
     //public GameObject muzzleFlash;
 
 
@@ -41,46 +46,41 @@ public class GunSystem : MonoBehaviour
         Cursor.visible = false;
 
     }
+
     private void Update()
     {
-        MyInput();
-
-        //SetText
-        text.SetText(bulletsLeft + " / " + magazineSize);
-        Ray ray = new Ray(fpsCam.transform.position, fpsCam.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * range, Color.red);
-    }
-    private void MyInput()
-    {
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
-
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
-
-        //Shoot
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
-        {
-            bulletsShot = bulletsPerTap;
+       if (Input.GetMouseButtonDown(0))
+        { 
+           if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+                bulletsShot = bulletsPerTap;
             Shoot();
         }
     }
+
+   
+
+
+
     private void Shoot()
     {
-        readyToShoot = false;
-
-        ShootingSystem.Play();
-
-        Vector3 direction = GetDirection();
-
-        if (Physics.Raycast(attackPoint.position, direction, out RaycastHit hit, float.MaxValue, whatIsEnemy))
+        muzzleFlash.Play();
+        RaycastHit hit;
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
+            Debug.Log(hit.transform.name);
             TrailRenderer trail = Instantiate(BulletTrail, attackPoint.position, Quaternion.identity);
 
             StartCoroutine(SpawnTrail(trail, hit));
 
-           
+
+            Target target = hit.transform.GetComponent<Target>();
+
+            if (target != null)
+            {
+                target.TakeDamage(damage);
+            }
         }
-    
+      
 
         bulletsLeft--;
         bulletsShot--;
@@ -91,11 +91,6 @@ public class GunSystem : MonoBehaviour
             Invoke("Shoot", timeBetweenShots);
     }
 
-    private Vector3 GetDirection()
-    {
-        Vector3 direction = transform.forward;
-        return direction;
-     }
 
     private IEnumerator SpawnTrail(TrailRenderer Trail, RaycastHit hit)
     {
@@ -135,4 +130,6 @@ public class GunSystem : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+  
 }
