@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 5536785534774378536}
   - component: {fileID: 292452480285448350}
   m_Layer: 6
-  m_Name: Keypad
+  m_Name: Keypad01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
