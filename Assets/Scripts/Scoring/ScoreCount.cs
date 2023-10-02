@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreCount : MonoBehaviour
+namespace MathewHartley
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// This class counts the number of targets are destroyed, releasing doors when thresholds are reached, and tracks the timer for submission to the high score table.
+    /// </summary>
+    public class ScoreCount : MonoBehaviour
     {
-        
-    }
+        public int targetDestroy;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void Update()
+        {
+            Debug.Log("Targets Destroyed: " + targetDestroy);
+        }
     }
 }
