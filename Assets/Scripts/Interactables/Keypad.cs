@@ -6,20 +6,23 @@ using UnityEngine;
 public class Keypad : Interactable
 
 {
-   [SerializeField] private GameObject door;
+    MathewHartley.GameManager gameManagerScript;
+    [SerializeField] private GameObject door;
     private bool doorOpen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
- 
-    }
+    // Start is called before the first frame update
+    //private void Start()
+    //{
+    //    gameManagerScript = GameObject.Find("GameManager").GetComponent<MathewHartley.GameManager>();
+    //}
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (gameManagerScript.killCount == 10)
+    //    {
+
+    //    }
+    //}
 
     protected override void Interact()
     {

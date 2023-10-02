@@ -6,8 +6,12 @@ public class Target : MonoBehaviour
 {
     public float health = 5f;
     public Trainer trainerSC;
+    MathewHartley.GameManager gameManagerScript;
 
-    public MathewHartley.ScoreCount script;
+    private void Start()
+    {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<MathewHartley.GameManager>();
+    }
 
     public void TakeDamage(float amount)
     {
@@ -20,8 +24,11 @@ public class Target : MonoBehaviour
 
     void Die()
     {
-        script.targetDestroy ++;
         Destroy(gameObject);
-        trainerSC.SpawnTarget();
+        gameManagerScript.TargetDestroyed();
+        if(gameManagerScript.killCount < 10) 
+        {
+            trainerSC.SpawnTarget();
+        } 
     }
 }
