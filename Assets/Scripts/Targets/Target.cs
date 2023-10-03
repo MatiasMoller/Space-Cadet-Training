@@ -33,10 +33,11 @@ public class Target : MonoBehaviour
             {
                 trainerSC.SpawnTarget();
             }
-            else if (this.CompareTag("Target2"))
-            {
+        }
+        else if ((gameManagerScript.killCount < 20) && (this.CompareTag("Target2")))
+          { 
                 trainerSC.SpawnTarget2();
-            }
+            
         }
     }
 
