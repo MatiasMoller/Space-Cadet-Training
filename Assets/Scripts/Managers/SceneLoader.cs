@@ -15,6 +15,16 @@ namespace MathewHartley
             SceneManager.LoadScene("MainMenu");
         }
 
+        public void LoadCredits()
+        {
+            SceneManager.LoadScene("CreditMenu");
+        }
+
+        public void LoadControls()
+        {
+            SceneManager.LoadScene("ControlMenu");
+        }
+
         public void LoadGame()
         {
             SceneManager.LoadScene("Game");
