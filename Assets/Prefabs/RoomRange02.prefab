@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 2008052104772077931}
   - component: {fileID: 400297196698347119}
   - component: {fileID: 2213985539835665331}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RangeBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

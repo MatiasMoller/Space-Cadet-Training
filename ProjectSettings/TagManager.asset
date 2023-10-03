@@ -8,6 +8,9 @@ TagManager:
   - Stop Timer
   - Range Timer
   - Target
+  - Target1
+  - Target2
+  - Range2
   layers:
   - Default
   - TransparentFX

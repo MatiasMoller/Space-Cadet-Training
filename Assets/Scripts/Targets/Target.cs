@@ -26,9 +26,18 @@ public class Target : MonoBehaviour
     {
         Destroy(gameObject);
         gameManagerScript.TargetDestroyed();
-        if(gameManagerScript.killCount < 10) 
+
+        if (gameManagerScript.killCount < 10)
         {
-            trainerSC.SpawnTarget();
-        } 
+            if (this.CompareTag("Target1"))
+            {
+                trainerSC.SpawnTarget();
+            }
+            else if (this.CompareTag("Target2"))
+            {
+                trainerSC.SpawnTarget2();
+            }
+        }
     }
+
 }
