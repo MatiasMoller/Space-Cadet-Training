@@ -17,7 +17,7 @@ namespace MathewHartley
 
         public void LoadCredits()
         {
-            SceneManager.LoadScene("CreditMenu");
+            SceneManager.LoadScene("CreditsMenu");
         }
 
         public void LoadControls()
