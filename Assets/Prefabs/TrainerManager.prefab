@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPrefab: {fileID: 5375693295516577663, guid: 637c1b7b364155243b68ab096cf73b7c, type: 3}
   targetPrefab2: {fileID: 6147819797422450461, guid: 684d39ab5b05cd2499c1cab8e52f44f4, type: 3}
+  targetPrefab3: {fileID: 2741458536023748331, guid: 0f14268b6928e3344b5b9673885af3cf, type: 3}

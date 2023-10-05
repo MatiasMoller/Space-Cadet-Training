@@ -11,6 +11,8 @@ TagManager:
   - Target1
   - Target2
   - Range2
+  - SkyboxCamera
+  - Target3
   layers:
   - Default
   - TransparentFX
