@@ -10,6 +10,7 @@ namespace MathewHartley
     {
         private Transform entryContainer;
         private Transform entryTemplate;
+
         float templateHeight = 35f;
         private void Awake()
         {
@@ -26,14 +27,14 @@ namespace MathewHartley
                 entryTransform.transform.SetParent(GameObject.Find("HighscoreTable").transform, false);
                 entryTransform.gameObject.SetActive(true);
 
-                //int playerRank = i + 1;
-                //entryTransform.Find("PositionText").GetComponent<TextMeshPro>().text = playerRank.ToString();
+                int playerRank = i + 1;
+                entryTransform.Find("PositionText").GetComponent<TextMeshProUGUI>().text = playerRank.ToString();
 
-                //int playerScore = Random.Range(0, 120);
-                //entryTransform.Find("ScoreText").GetComponent<TextMeshPro>().text = playerScore.ToString();
+                int playerScore = Random.Range(0, 120);
+                entryTransform.Find("TimeText").GetComponent<TextMeshProUGUI>().text = playerScore.ToString();
 
-                //string playerName = "AAA";
-                //entryTransform.Find("NameText").GetComponent<TextMeshPro>().text = playerName;
+                string playerName = "AAA";
+                entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().text = playerName;
             }
         }
     }
