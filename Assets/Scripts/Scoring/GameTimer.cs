@@ -27,7 +27,7 @@ namespace MathewHartley
         [Header("Format Settings")]
         public bool hasFormat;
         public TimerFormats format;
-        private Dictionary<TimerFormats, string> timeFormats = new Dictionary<TimerFormats, string>();
+        public Dictionary<TimerFormats, string> timeFormats = new Dictionary<TimerFormats, string>();
 
         // Start is called before the first frame update
         //Populates the disctionary of formats

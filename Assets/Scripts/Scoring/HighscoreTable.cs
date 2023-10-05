@@ -78,7 +78,7 @@ namespace MathewHartley
         /// <summary>
         /// Adds a highscore entry to the list by loading the existing list, adding to it, then saving the list
         /// </summary>
-        private void AddHighscoreEntry(float playerTime, string playerName)
+        public void AddHighscoreEntry(float playerTime, string playerName)
         {
             //Create highscore entry
             HighscoreEntry highscoreEntry = new HighscoreEntry { playerTime = playerTime, playerName = playerName };
