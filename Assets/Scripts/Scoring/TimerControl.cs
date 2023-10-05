@@ -9,21 +9,21 @@ namespace MathewHartley
     /// </summary>
     public class TimerControl : MonoBehaviour
     {
-        public GameTimer script;
+        public GameTimer timer;
         private void OnTriggerEnter(Collider collision)
         {
             if (this.tag == "Start Timer")
             {
-                script.isPaused = false;
+                timer.isPaused = false;
             }
             if (this.tag == "Stop Timer")
             {
-                script.hasLimit = true;
-                script.timerLimit = script.currentTime;
+                timer.hasLimit = true;
+                timer.timerLimit = timer.currentTime;
             }
             if (this.tag == "Range Timer")
             {
-                script.isPaused = false;
+                timer.isPaused = false;
             }
         }
     }
