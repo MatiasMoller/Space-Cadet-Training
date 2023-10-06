@@ -17,5 +17,11 @@ namespace MathewHartley
             killCountTxt.text = killCount.ToString();
         }
 
+        public void DoorsOpened()
+        {
+            // You can add any logic here related to doors being opened.
+            // For example, you might want to trigger something when doors are opened.
+            Debug.Log("Doors are opened!");
+        }
     }
 }
