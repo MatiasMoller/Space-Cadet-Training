@@ -57,6 +57,12 @@ namespace MathewHartley
         {
             float templateHeight = 35f;
 
+            //Only create the transform if the list contains fewer than 10 entries
+            if (transformList.Count >= 10)
+            {
+                return;
+            }
+
             Transform entryTransform = Instantiate(entryTemplate, container);
             RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
             entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
@@ -113,6 +119,21 @@ namespace MathewHartley
         {
             public float playerTime;
             public string playerName;
+        }
+
+        public void ClearHighscoreTable()
+        {
+            //Load the JSON list from PlayerPrefs
+            string jsonString = PlayerPrefs.GetString("highscoreTable");
+            Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+
+            //Clear the list of high score entries
+            highscores.highscoreEntryList.Clear();
+
+            //Save the JSON list to PlayerPrefs
+            string json = JsonUtility.ToJson(highscores);
+            PlayerPrefs.SetString("highscoreTable", json);
+            PlayerPrefs.Save();
         }
     }
 }
