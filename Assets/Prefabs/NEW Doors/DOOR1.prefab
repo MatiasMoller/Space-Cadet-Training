@@ -178,6 +178,7 @@ MonoBehaviour:
   promptMessage: Use Keypad
   firstDoor: {fileID: 7144158391377257045, guid: c451a292270413d4ab9a9f1884d5f46e, type: 3}
   secondDoor: {fileID: 7203490548949796093}
+  thirdDoor: {fileID: 5215833948323304037, guid: 900f028dfebd45043926e2a07ab8022b, type: 3}
 --- !u!1001 &659657566569688051
 PrefabInstance:
   m_ObjectHideFlags: 0

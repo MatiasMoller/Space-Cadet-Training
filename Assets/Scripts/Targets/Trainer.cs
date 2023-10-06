@@ -34,6 +34,11 @@ public class Trainer : MonoBehaviour
         float randomY = Random.Range(10f, 15f);
         float randomZ = Random.Range(-43f, -23f);
         Vector3 randomSpawn3 = new Vector3(randomX, randomY, randomZ);
-        Instantiate(targetPrefab3, randomSpawn3, Quaternion.identity);
+
+        // Use Quaternion.Euler to create a rotation quaternion for 180 degrees around the Y-axis
+        Quaternion rotation = Quaternion.Euler(0f, 180f, 0f);
+
+        Instantiate(targetPrefab3, randomSpawn3, rotation);
     }
+
 }
