@@ -28,10 +28,10 @@ public class Keypad : Interactable
             firstDoorOpen = true;
             firstDoor.GetComponent<Animator>().SetBool("IsOpen", true);
         }
-        else
-        {
+        
+        
             // Check if the kill count is 9 or more for the second door
-            if (gameManager.killCount >= 9 && !secondDoorOpen)
+            if (gameManager.killCount > 9 && !secondDoorOpen)
             {
                 // Open the second door
                 OpenSecondDoor();
@@ -42,7 +42,7 @@ public class Keypad : Interactable
                 // needs to kill more enemies to access the second door.
                 Debug.Log("You need to kill more enemies to access the second door.");
             }
-        }
+        
     }
 
     private void OpenSecondDoor()
