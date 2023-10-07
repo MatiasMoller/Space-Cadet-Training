@@ -7,6 +7,7 @@ public class Trainer : MonoBehaviour
     public GameObject targetPrefab2;
     public GameObject targetPrefab3;
     public static Trainer instance;
+
     
 
 

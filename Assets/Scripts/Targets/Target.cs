@@ -7,6 +7,9 @@ public class Target : MonoBehaviour
     public float health = 5f;
     public Trainer trainerSC;
     MathewHartley.GameManager gameManagerScript;
+    public Death deathSounds;
+    
+  
 
     private void Start()
     {
@@ -26,11 +29,14 @@ public class Target : MonoBehaviour
     {
         Destroy(gameObject);
         gameManagerScript.TargetDestroyed();
+        deathSounds.PlayDeathSound1();
 
         if (gameManagerScript.killCount < 10)
         {
-            if (this.CompareTag("Target1"))
+            
+            if (this.CompareTag("Target1")) 
             {
+               
                 trainerSC.SpawnTarget();
             }
         }

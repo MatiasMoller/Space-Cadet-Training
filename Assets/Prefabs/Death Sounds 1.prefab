@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5434129383751618236
+--- !u!1 &3695255679645116282
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,58 +8,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1067177135736731740}
-  - component: {fileID: 7841633683345216897}
-  - component: {fileID: 4225521366771020990}
+  - component: {fileID: 4810646473498650630}
+  - component: {fileID: 2494676383539444714}
+  - component: {fileID: 4769797252560811596}
   m_Layer: 0
-  m_Name: TrainerManager
+  m_Name: Death Sounds 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1067177135736731740
+--- !u!4 &4810646473498650630
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5434129383751618236}
+  m_GameObject: {fileID: 3695255679645116282}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.0043035, y: -11.365532, z: -61.86772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7841633683345216897
+--- !u!114 &2494676383539444714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5434129383751618236}
+  m_GameObject: {fileID: 3695255679645116282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14e2313838761bc409cf0cb9bc3a0ed8, type: 3}
+  m_Script: {fileID: 11500000, guid: dfd3d9d83223c1f498be06d68fffacd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPrefab: {fileID: 287159921641876893, guid: 7cb8e9a0bff61fa4ebbb7cdd49b74999, type: 3}
-  targetPrefab2: {fileID: 6147819797422450461, guid: 684d39ab5b05cd2499c1cab8e52f44f4, type: 3}
-  targetPrefab3: {fileID: 2741458536023748331, guid: 0f14268b6928e3344b5b9673885af3cf, type: 3}
-  target1: {fileID: 4225521366771020990}
---- !u!82 &4225521366771020990
+  deathSound1: {fileID: 4769797252560811596}
+--- !u!82 &4769797252560811596
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5434129383751618236}
+  m_GameObject: {fileID: 3695255679645116282}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aec493c32e08d8547826eadf66c619e6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eadde940c49686b4d97a4942958310be, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
