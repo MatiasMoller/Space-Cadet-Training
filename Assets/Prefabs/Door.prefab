@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7144158391377257045}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 5536785534774378536}
   - component: {fileID: 292452480285448350}
   m_Layer: 6
-  m_Name: Keypad01
+  m_Name: Keypad02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88a8070559f12174ca8b8efbdbeb6444, type: 2}
+  - {fileID: 2100000, guid: 0d0f1f087865a1c47826008280428fdf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Use Keypad
+  promptMessage: Press E to Use Keypad
   firstDoor: {fileID: 7144158391377257045}
   secondDoor: {fileID: 7203490548949796093, guid: 494d615ef5f1fdb40811957f9eec3545, type: 3}
   thirdDoor: {fileID: 5215833948323304037, guid: 900f028dfebd45043926e2a07ab8022b, type: 3}
@@ -187,13 +187,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 950583934160843997}
     m_Modifications:
+    - target: {fileID: 3280542171101338238, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f4853191d321d748b1f95a97d7b37f4, type: 2}
     - target: {fileID: 5342460786040354432, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
       propertyPath: m_Name
       value: Door 4 1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -249,13 +265,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 950583934160843997}
     m_Modifications:
+    - target: {fileID: 3280542171101338238, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f4853191d321d748b1f95a97d7b37f4, type: 2}
     - target: {fileID: 5342460786040354432, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
       propertyPath: m_Name
       value: Door 4 1
       objectReference: {fileID: 0}
     - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6697181475242197908, guid: 96d7b573107ac4c49a6a5d6e5110fcfb, type: 3}
       propertyPath: m_LocalPosition.y
