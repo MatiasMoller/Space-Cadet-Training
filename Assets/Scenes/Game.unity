@@ -6421,6 +6421,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1590495001}
+    - target: {fileID: 2136451134247989177, guid: 2d92a642014ca6944837f5cfb1c87bb5, type: 3}
+      propertyPath: fourthDoor
+      value: 
+      objectReference: {fileID: 1264281759870939388, guid: 9b8ef41c3f71fa040876597395299e85, type: 3}
     - target: {fileID: 3023470524678353834, guid: 2d92a642014ca6944837f5cfb1c87bb5, type: 3}
       propertyPath: m_Name
       value: RangeTrigger (1)
