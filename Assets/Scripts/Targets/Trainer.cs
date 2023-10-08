@@ -24,7 +24,7 @@ public class Trainer : MonoBehaviour
     public void SpawnTarget2()
     {
        float randomX = Random.Range(-48f, -28f);
-        float randomY = Random.Range(11f, 6f);
+        float randomY = Random.Range(10f, 6f);
         float randomZ = Random.Range(-23f, -13f);
         Vector3 randomSpawn2 = new Vector3(randomX, randomY, randomZ);
        Instantiate(targetPrefab2, randomSpawn2, Quaternion.identity);

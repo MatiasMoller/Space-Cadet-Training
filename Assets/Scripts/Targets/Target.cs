@@ -8,20 +8,40 @@ public class Target : MonoBehaviour
     public Trainer trainerSC;
     MathewHartley.GameManager gameManagerScript;
     public Death deathSounds;
-    
-  
+    private MeshRenderer thisRender;
+    private Transform childCheck;
+    private MeshRenderer thisRender3A;
+    private MeshRenderer thisRender3B;
 
     private void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<MathewHartley.GameManager>();
+        if (this.CompareTag("Target3"))
+        {
+            childCheck = transform.Find("Body_Back");
+            thisRender3A = childCheck.GetComponent<MeshRenderer>();
+            childCheck = transform.Find("Body_Front");
+            thisRender3B = childCheck.GetComponent<MeshRenderer>();
+        }
+        else
+        {
+            thisRender = this.gameObject.GetComponent<MeshRenderer>();
+        }
     }
 
     public void TakeDamage(float amount)
     {
         health-= amount;
-        if (health <= 0)
+        if ((health <= 0) && this.CompareTag("Target3"))
         {
-            Die();
+            thisRender3A.enabled = false;
+            thisRender3B.enabled = false;
+            StartCoroutine(WaitToDie());
+        }
+        else if (health <= 0)
+        {
+            thisRender.enabled = false;
+            StartCoroutine(WaitToDie());
         }
     }
 
@@ -29,7 +49,6 @@ public class Target : MonoBehaviour
     {
         Destroy(gameObject);
         gameManagerScript.TargetDestroyed();
-        deathSounds.PlayDeathSound1();
 
         if (gameManagerScript.killCount < 10)
         {
@@ -49,5 +68,12 @@ public class Target : MonoBehaviour
         {
             trainerSC.SpawnTarget3();
         }
+    }
+
+    IEnumerator WaitToDie()
+    {
+        deathSounds.PlayDeathSound1();
+        yield return new WaitForSeconds(.5f);
+        Die();
     }
 }

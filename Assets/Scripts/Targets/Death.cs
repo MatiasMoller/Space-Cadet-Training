@@ -8,6 +8,8 @@ public class Death : MonoBehaviour
 
     public void PlayDeathSound1()
     {
+        deathSound1 = GetComponent<AudioSource>();
         deathSound1.Play();
+        Debug.Log("Play Death Sound");
     }
 }
