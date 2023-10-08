@@ -14,6 +14,10 @@ public class Keypad : Interactable
     private bool thirdDoorOpen;
     private bool fourthDoorOpen;
 
+    [SerializeField] private AudioClip doorOpenSound;
+    private AudioSource audioSource;
+
+
     // Reference to the GameManager
     private GameManager gameManager;
 
@@ -21,6 +25,10 @@ public class Keypad : Interactable
     {
         // Find the GameManager in the scene
         gameManager = FindObjectOfType<GameManager>();
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = doorOpenSound;
     }
 
     protected override void Interact()
@@ -31,6 +39,7 @@ public class Keypad : Interactable
             // Open the first door
             firstDoorOpen = true;
             firstDoor.GetComponent<Animator>().SetBool("IsOpen", true);
+            PlayDoorOpenSound();
         }
         
         
@@ -65,17 +74,34 @@ public class Keypad : Interactable
     {
         secondDoorOpen = true;
         secondDoor.GetComponent<Animator>().SetBool("IsOpen", true);
+        PlayDoorOpenSound();
     }
 
     private void OpenThirdDoor()
     {
         thirdDoorOpen = true;
         thirdDoor.GetComponent<Animator>().SetBool("IsOpen", true);
+        PlayDoorOpenSound();
     }
 
     private void OpenFourthDoor()
     {
         fourthDoorOpen = true;
         fourthDoor.GetComponent<Animator>().SetBool("IsOpen", true);
+        PlayDoorOpenSound();
     }
+
+    private void PlayDoorOpenSound()
+    {
+        // Check if the AudioClip is assigned
+        if (doorOpenSound != null)
+        {
+            audioSource.PlayOneShot(doorOpenSound);
+        }
+        else
+        {
+            Debug.LogWarning("Door open sound is not assigned.");
+        }
+    }
+
 }
