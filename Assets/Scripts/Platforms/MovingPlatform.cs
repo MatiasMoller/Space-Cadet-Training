@@ -49,14 +49,19 @@ public class MovingPlatform : MonoBehaviour
         _timeToWaypoint = distanceToWaypoint / _speed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-
-        other.transform.SetParent(transform);
+        if (other.gameObject.tag == "Player")
+        {
+            other.transform.parent = transform;
+        }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
+       if(other.gameObject.tag == "Player")
+        {
+            other.transform.parent = null;
+        }
     }
 }
