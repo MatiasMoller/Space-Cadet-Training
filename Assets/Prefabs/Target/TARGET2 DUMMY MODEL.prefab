@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78711ab9afbb7144480f647cbfb59e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
+  health: 10
   trainerSC: {fileID: 7841633683345216897, guid: 6b05683648ae1cc4b82a4706f0c7ce61, type: 3}
   deathSounds: {fileID: 2494676383539444714, guid: 64053c4210c354248bd499ac4e149bae, type: 3}
 --- !u!82 &-4986927472304639267

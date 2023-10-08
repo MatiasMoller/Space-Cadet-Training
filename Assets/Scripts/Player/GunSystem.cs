@@ -20,6 +20,7 @@ public class GunSystem : MonoBehaviour
     [SerializeField] private TrailRenderer BulletTrail;
     [SerializeField] private ParticleSystem ShootingSystem;
     [SerializeField] private ParticleSystem muzzleFlash;
+    [SerializeField] private AudioSource laserShot;
 
     //bools 
     bool shooting, readyToShoot, reloading;
@@ -64,6 +65,7 @@ public class GunSystem : MonoBehaviour
     private void Shoot()
     {
         muzzleFlash.Play();
+        laserShot.Play();
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
