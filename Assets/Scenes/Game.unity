@@ -2759,8 +2759,7 @@ MonoBehaviour:
   allowButtonHold: 1
   ImpactParticleSystem: {fileID: 198000013440722320, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   BulletTrail: {fileID: 325253383}
-  ShootingSystem: {fileID: 1984377856138241260, guid: 184e8cd8dad6df647bb005b84f1411ab, type: 3}
-  muzzleFlash: {fileID: 198000012944515248, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
+  muzzleFlash: {fileID: 891647837}
   laserShot: {fileID: 867106339}
   fpsCam: {fileID: 1019348859}
   attackPoint: {fileID: 2045946074}
@@ -2865,6 +2864,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!198 &891647837 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8849445829518558835, guid: 3c81b162a1af44348b8994f7040514d4, type: 3}
+  m_PrefabInstance: {fileID: 1200423328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &913350543
 PrefabInstance:
   m_ObjectHideFlags: 0

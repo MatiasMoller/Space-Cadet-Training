@@ -18,7 +18,7 @@ public class GunSystem : MonoBehaviour
 
     [SerializeField] private ParticleSystem ImpactParticleSystem;
     [SerializeField] private TrailRenderer BulletTrail;
-    [SerializeField] private ParticleSystem ShootingSystem;
+    
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private AudioSource laserShot;
 
@@ -65,14 +65,19 @@ public class GunSystem : MonoBehaviour
     private void Shoot()
     {
         muzzleFlash.Play();
+        
         laserShot.Play();
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
             TrailRenderer trail = Instantiate(BulletTrail, attackPoint.position, Quaternion.identity);
+            ParticleSystem muzzleflash = Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+            
 
             StartCoroutine(SpawnTrail(trail, hit));
+           
+
 
 
             Target target = hit.transform.GetComponent<Target>();
