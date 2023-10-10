@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 7648609997448023065}
   - component: {fileID: 2854061984425445421}
   - component: {fileID: 6234790070730640633}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RangeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

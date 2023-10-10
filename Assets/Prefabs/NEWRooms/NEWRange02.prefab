@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 8317912080401914298}
   - component: {fileID: 4907536914373678946}
   - component: {fileID: 384728984066421764}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RangeTrigger
   m_TagString: Range Timer
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 7578250139725917542}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 3, z: -6}
+  m_LocalPosition: {x: -0, y: 2.5, z: -6}
   m_LocalScale: {x: 20, y: 3, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
