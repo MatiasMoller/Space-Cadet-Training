@@ -10,7 +10,8 @@ public class ArrowChange : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            arrowIndicator.playerEnteredTrigger = true;
+            
+            arrowIndicator.RotateTowardsGoal2();
             Debug.Log("Player entered trigger");
             // Additional actions related to the player can be added here
         }

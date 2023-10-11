@@ -7,21 +7,19 @@ public class ArrowIndicator : MonoBehaviour
     public Transform goal2;
     public float rotationSpeed;
 
-    public bool playerEnteredTrigger;
+    public bool playerEnteredTrigger; 
 
-    private void Start()
-    {
-        playerEnteredTrigger = false;
-    }
 
-    public void Update()
+
+
+    private void Update()
     {
         if (playerEnteredTrigger == true)
         {
             Debug.Log("Player entered trigger - Rotating towards Goal 2");
             RotateTowardsGoal2();
         }
-        else
+        else if (playerEnteredTrigger == false) 
         {
             Debug.Log("Player not in trigger - Rotating towards Goal 1");
             RotateTowardsGoal1();
@@ -34,7 +32,7 @@ public class ArrowIndicator : MonoBehaviour
     public void RotateTowardsGoal1()
     {
         
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(goal1.position - transform.position), rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(goal1.position - transform.position), rotationSpeed * Time.deltaTime);
     }
     public void RotateTowardsGoal2()
     {
