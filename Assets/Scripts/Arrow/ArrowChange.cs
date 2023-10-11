@@ -8,10 +8,10 @@ public class ArrowChange : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            
+        if (other.CompareTag("Gate2"))
+        {  
             arrowIndicator.RotateTowardsGoal2();
+            arrowIndicator.playerEnteredTrigger = true;
             Debug.Log("Player entered trigger");
             // Additional actions related to the player can be added here
         }

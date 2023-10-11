@@ -9,17 +9,14 @@ public class ArrowIndicator : MonoBehaviour
 
     public bool playerEnteredTrigger; 
 
-
-
-
     private void Update()
     {
-        if (playerEnteredTrigger == true)
+        if (playerEnteredTrigger)
         {
             Debug.Log("Player entered trigger - Rotating towards Goal 2");
             RotateTowardsGoal2();
         }
-        else if (playerEnteredTrigger == false) 
+        else if (!playerEnteredTrigger) 
         {
             Debug.Log("Player not in trigger - Rotating towards Goal 1");
             RotateTowardsGoal1();
