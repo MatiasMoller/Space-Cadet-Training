@@ -9,8 +9,8 @@ namespace MathewHartley
     /// </summary>
     public class TimerControl : MonoBehaviour
     {
-        public AudioSource music;
-        public GameTimer timer;
+
+    public GameTimer timer;
         private void OnTriggerEnter(Collider collision)
         {
             if (this.tag == "Start Timer")
@@ -25,10 +25,6 @@ namespace MathewHartley
             if (this.tag == "Range Timer")
             {
                 timer.isPaused = false;
-            }
-            if (collision.CompareTag("Player"))
-            {
-                music.Play();
             }
         }
     }
