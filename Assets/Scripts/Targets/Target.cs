@@ -38,7 +38,7 @@ public class Target : MonoBehaviour
             thisRender3B.enabled = false;
             StartCoroutine(WaitToDie());
         }
-        else if (health <= 0)
+        else if ((health <= 0) && (this.CompareTag("Target2") || this.CompareTag("Target1")))
         {
             thisRender.enabled = false;
             StartCoroutine(WaitToDie());
