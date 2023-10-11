@@ -10,7 +10,7 @@ namespace MathewHartley
     public class GameManager : MonoBehaviour
     {
 
-        public Keypad keypad;
+       
         public TextMeshProUGUI killCountTxt;
         public int killCount;
 
