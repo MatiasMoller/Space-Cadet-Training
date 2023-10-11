@@ -13,9 +13,8 @@ public class Movement : MonoBehaviour
         
    
    
-        // Moves the object forward at two units per second.
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-  
+       
 
-        }
+        transform.Translate(Vector3.right * Mathf.Sin(Time.time) * 2f * Time.deltaTime);
+    }
 }
