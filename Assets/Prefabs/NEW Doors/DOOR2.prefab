@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 7462999460963856408}
   - component: {fileID: 1672647958927769036}
   - component: {fileID: 3089264854973484972}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Keypad02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,13 +85,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5477327608956494441}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.17937481, y: -0, z: -0.000000022351742, w: 0.98378086}
-  m_LocalPosition: {x: 3.997, y: -0.183, z: 0.212}
+  m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
+  m_LocalPosition: {x: 3.997, y: -0.181, z: 0.058}
   m_LocalScale: {x: 0.49910608, y: 0.42540392, z: 0.04797364}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2771504252450276589}
-  m_LocalEulerAnglesHint: {x: -20.667, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
 --- !u!33 &5486447006120093369
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -176,12 +176,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Use Keypad
+  promptMessage: 
   firstDoor: {fileID: 7144158391377257045, guid: c451a292270413d4ab9a9f1884d5f46e, type: 3}
   secondDoor: {fileID: 7203490548949796093, guid: 494d615ef5f1fdb40811957f9eec3545, type: 3}
   thirdDoor: {fileID: 5215833948323304037}
   fourthDoor: {fileID: 1264281759870939388, guid: 9b8ef41c3f71fa040876597395299e85, type: 3}
-  doorOpenSound: {fileID: 8300000, guid: 792aa82886ac5e14a82594d2128764d0, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: 88e0d4ce3ee6eff49b927514a2fbea22, type: 3}
 --- !u!82 &3089264854973484972
 AudioSource:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 792aa82886ac5e14a82594d2128764d0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 88e0d4ce3ee6eff49b927514a2fbea22, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

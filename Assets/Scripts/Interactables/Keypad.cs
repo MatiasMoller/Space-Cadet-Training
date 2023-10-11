@@ -21,7 +21,7 @@ public class Keypad : Interactable
     // Reference to the GameManager
     private GameManager gameManager;
 
-    private void Start()
+    public void Start()
     {
         // Find the GameManager in the scene
         gameManager = FindObjectOfType<GameManager>();
@@ -29,6 +29,23 @@ public class Keypad : Interactable
         audioSource = GetComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.clip = doorOpenSound;
+    }
+    void Update()
+    {
+        // Check if the kill count is 9 or more for the second door
+        if (gameManager.killCount > 9 && !secondDoorOpen)
+        {
+            OpenSecondDoor();
+        }
+
+        if (gameManager.killCount > 19 && !thirdDoorOpen)
+        {
+            OpenThirdDoor();
+        }
+        if (gameManager.killCount > 24 && !fourthDoorOpen)
+        {
+            OpenFourthDoor();
+        }
     }
 
     protected override void Interact()
@@ -43,25 +60,25 @@ public class Keypad : Interactable
         }
         
         
-            // Check if the kill count is 9 or more for the second door
-            if (gameManager.killCount > 9 && !secondDoorOpen)
-            {
+        //    // Check if the kill count is 9 or more for the second door
+        //    if (gameManager.killCount > 9 && !secondDoorOpen)
+        //    {
                 
-                OpenSecondDoor();
-            }
+        //        OpenSecondDoor();
+        //    }
       
 
-        if (gameManager.killCount > 18 && !thirdDoorOpen)
-        {
-            OpenThirdDoor();
-            Debug.Log("keypad touched");
-        }
+        //if (gameManager.killCount > 18 && !thirdDoorOpen)
+        //{
+        //    OpenThirdDoor();
+        //    Debug.Log("keypad touched");
+        //}
        
-        if (gameManager.killCount > 24 && !fourthDoorOpen)
-        {
-            // Open the second door
-            OpenFourthDoor();
-        }
+        //if (gameManager.killCount > 24 && !fourthDoorOpen)
+        //{
+        //    // Open the second door
+        //    OpenFourthDoor();
+        //}
         //else
         //{
         //    // Display a message or perform some action indicating that the player
@@ -70,21 +87,21 @@ public class Keypad : Interactable
         //}
     }
 
-    private void OpenSecondDoor()
+    public void OpenSecondDoor()
     {
         secondDoorOpen = true;
         secondDoor.GetComponent<Animator>().SetBool("IsOpen", true);
         PlayDoorOpenSound();
     }
 
-    private void OpenThirdDoor()
+    public void OpenThirdDoor()
     {
         thirdDoorOpen = true;
         thirdDoor.GetComponent<Animator>().SetBool("IsOpen", true);
         PlayDoorOpenSound();
     }
 
-    private void OpenFourthDoor()
+    public void OpenFourthDoor()
     {
         fourthDoorOpen = true;
         fourthDoor.GetComponent<Animator>().SetBool("IsOpen", true);

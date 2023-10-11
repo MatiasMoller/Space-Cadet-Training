@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 namespace MathewHartley
 {
     public class GameManager : MonoBehaviour
     {
+
+        public Keypad keypad;
         public TextMeshProUGUI killCountTxt;
         public int killCount;
 
@@ -15,13 +18,10 @@ namespace MathewHartley
         {
             killCount++;
             killCountTxt.text = killCount.ToString();
+
+            
         }
 
-        public void DoorsOpened()
-        {
-            // You can add any logic here related to doors being opened.
-            // For example, you might want to trigger something when doors are opened.
-            Debug.Log("Doors are opened!");
-        }
+        
     }
 }

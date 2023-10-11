@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 5477585864053499520}
   - component: {fileID: 4369579461727316820}
   - component: {fileID: 92224972992437411}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Keypad02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,13 +85,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7464379222106584305}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.17937481, y: -0, z: -0.000000022351742, w: 0.98378086}
-  m_LocalPosition: {x: 3.69, y: -0.11, z: 0.23}
+  m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
+  m_LocalPosition: {x: 3.69, y: -0.108, z: 0.092}
   m_LocalScale: {x: 0.49910608, y: 0.42540392, z: 0.04797364}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1000908818931651189}
-  m_LocalEulerAnglesHint: {x: -20.667, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
 --- !u!33 &7473278630508474401
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -176,12 +176,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useEvents: 0
-  promptMessage: Use Keypad
+  promptMessage: 
   firstDoor: {fileID: 7144158391377257045, guid: c451a292270413d4ab9a9f1884d5f46e, type: 3}
   secondDoor: {fileID: 7203490548949796093}
   thirdDoor: {fileID: 5215833948323304037, guid: 900f028dfebd45043926e2a07ab8022b, type: 3}
   fourthDoor: {fileID: 1264281759870939388, guid: 9b8ef41c3f71fa040876597395299e85, type: 3}
-  doorOpenSound: {fileID: 8300000, guid: 792aa82886ac5e14a82594d2128764d0, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: 88e0d4ce3ee6eff49b927514a2fbea22, type: 3}
 --- !u!82 &92224972992437411
 AudioSource:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 792aa82886ac5e14a82594d2128764d0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 88e0d4ce3ee6eff49b927514a2fbea22, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -200,7 +200,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 70
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
