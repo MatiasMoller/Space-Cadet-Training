@@ -12,6 +12,7 @@ public class SpawnTarget1 : MonoBehaviour
         {
             Debug.Log("player crossed");
             trainerSC.SpawnTarget();
+            this.gameObject.SetActive(false);
         }
     }
 }

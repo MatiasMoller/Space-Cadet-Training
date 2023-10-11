@@ -42,6 +42,7 @@ namespace MathewHartley
                 finalTimeText.text = playerTime.ToString();
                 Debug.Log("Run Time: " + playerTime.ToString());
             }
+            this.gameObject.SetActive(false);
         }
 
         public void SubmitScore()
