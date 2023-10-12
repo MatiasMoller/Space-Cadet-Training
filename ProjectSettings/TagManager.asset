@@ -15,6 +15,7 @@ TagManager:
   - Target3
   - Gate1
   - Gate2
+  - Gate3
   layers:
   - Default
   - TransparentFX
