@@ -7818,6 +7818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7841633683345216897, guid: 6b05683648ae1cc4b82a4706f0c7ce61, type: 3}
+      propertyPath: particleEffectPrefab
+      value: 
+      objectReference: {fileID: 1912731163003908, guid: c5febdd93ab44d640b3eb37b768360bb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -53,6 +53,7 @@ MonoBehaviour:
   health: 30
   trainerSC: {fileID: 7841633683345216897, guid: 6b05683648ae1cc4b82a4706f0c7ce61, type: 3}
   deathSounds: {fileID: 8871995948388346153}
+  deathParticlePrefab: {fileID: 2662458970281257441, guid: d80cb12a12e4b7d42bbf29097450c215, type: 3}
 --- !u!136 &6041878726100862465
 CapsuleCollider:
   m_ObjectHideFlags: 0

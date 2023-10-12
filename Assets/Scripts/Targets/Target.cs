@@ -13,6 +13,8 @@ public class Target : MonoBehaviour
     private MeshRenderer thisRender3A;
     private MeshRenderer thisRender3B;
 
+    public GameObject deathParticlePrefab;
+
     private void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<MathewHartley.GameManager>();
@@ -31,24 +33,37 @@ public class Target : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        health-= amount;
+        health -= amount;
+        Vector3 spawnPosition = transform.position + new Vector3(0, 1.0f, 0); // Adjust the Y value as needed
+
         if ((health <= 0) && this.CompareTag("Target3"))
         {
             thisRender3A.enabled = false;
             thisRender3B.enabled = false;
             StartCoroutine(WaitToDie());
+            GameObject deathParticle = Instantiate(deathParticlePrefab);
+            deathParticle.transform.position = spawnPosition; // Use the adjusted position
+            Destroy(deathParticle, 0.2f);
         }
         else if ((health <= 0) && (this.CompareTag("Target2") || this.CompareTag("Target1")))
         {
             thisRender.enabled = false;
             StartCoroutine(WaitToDie());
+            GameObject deathParticle = Instantiate(deathParticlePrefab);
+            deathParticle.transform.position = spawnPosition; // Use the adjusted position
+            Destroy(deathParticle, 0.2f);
         }
     }
 
+
     void Die()
     {
+        
+
         Destroy(gameObject);
         gameManagerScript.TargetDestroyed();
+
+       
 
         if (gameManagerScript.killCount < 10)
         {

@@ -148,6 +148,7 @@ MonoBehaviour:
   health: 10
   trainerSC: {fileID: 7841633683345216897, guid: 6b05683648ae1cc4b82a4706f0c7ce61, type: 3}
   deathSounds: {fileID: 4665732093768192874}
+  deathParticlePrefab: {fileID: 2662458970281257441, guid: d80cb12a12e4b7d42bbf29097450c215, type: 3}
 --- !u!82 &-4986927472304639267
 AudioSource:
   m_ObjectHideFlags: 0

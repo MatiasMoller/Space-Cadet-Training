@@ -47,3 +47,4 @@ MonoBehaviour:
   targetPrefab: {fileID: 287159921641876893, guid: 7cb8e9a0bff61fa4ebbb7cdd49b74999, type: 3}
   targetPrefab2: {fileID: 1730835254960503708, guid: 1f313d88f7d479f4c855a12621afd093, type: 3}
   targetPrefab3: {fileID: 2741458536023748331, guid: 0f14268b6928e3344b5b9673885af3cf, type: 3}
+  particleEffectPrefab: {fileID: 1912731163003908, guid: c5febdd93ab44d640b3eb37b768360bb, type: 3}
