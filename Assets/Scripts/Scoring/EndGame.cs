@@ -9,7 +9,7 @@ namespace MathewHartley
     {
         [Header("Highscore Objects")]
         public GameObject scoreTable;
-        public HighScoreTable highscoreTable;
+        public HighscoreTableV2 highscoreTable;
 
         [Header("Timer Objects")]
         public TextMeshProUGUI finalTimeText;
@@ -42,24 +42,25 @@ namespace MathewHartley
                 finalTimeText.text = playerTime.ToString();
                 Debug.Log("Run Time: " + playerTime.ToString());
             }
-            this.gameObject.SetActive(false);
+            GameObject playerCharacter = GameObject.Find("Player");
+            playerCharacter.GetComponent<InputManager>().enabled = false;
         }
 
         public void SubmitScore()
         {
             playerName = playerInput.text;
             highscoreTable.AddHighscoreEntry(playerTime, playerName);
+            Debug.Log("Score Submitted");
+            inputWindow.SetActive(false);
             StartCoroutine(ShowScores());
         }
 
-
         IEnumerator ShowScores()
         {
-            inputWindow.SetActive(false);
+            Debug.Log("Started Coroutine at timestamp : " + Time.time);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             scoreTable.SetActive(true);
-            Debug.Log("Started Coroutine at timestamp : " + Time.time);
             yield return new WaitForSeconds(10);
             Debug.Log("Finished Coroutine at timestamp : " + Time.time);
             endGame.LoadEnd();

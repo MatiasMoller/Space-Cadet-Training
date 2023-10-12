@@ -107,7 +107,7 @@ namespace MathewHartley
         /// </summary>
         private class Highscores
         {
-            public List<HighscoreEntry> highscoreEntryList;
+            public List<HighscoreEntry> highscoreEntryList = new List<HighscoreEntry>();
         }
 
 

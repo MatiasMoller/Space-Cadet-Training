@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 335494143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87e21785359a2342aef128badf1a873, type: 3}
+  m_Script: {fileID: 11500000, guid: 03a9598e3e34ae74d882d7016a5d43ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &352162044
@@ -4114,7 +4114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 335494145}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MathewHartley.HighScoreTable, Assembly-CSharp
         m_MethodName: ClearHighscoreTable
         m_Mode: 1
