@@ -35,7 +35,8 @@ public class HighscoreTableV2 : MonoBehaviour
         //    new HighscoreEntry{ playerScore = 6157.0f, playerName = "DVJ"},
         //};
 
-        string jsonString = File.ReadAllText(Application.dataPath + "/highscores.txt");
+        string jsonString = PlayerPrefs.GetString("HighscoreTable");
+        //string jsonString = File.ReadAllText(Application.dataPath + "/highscores.txt");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         //Bubble sort entry list by time, with lowest at the top
@@ -100,15 +101,14 @@ public class HighscoreTableV2 : MonoBehaviour
         HighscoreEntry highscoreEntry = new HighscoreEntry { playerScore = playerScore, playerName = playerName };
 
         string jsonString = PlayerPrefs.GetString("HighscoreTable");
+        //string jsonString = File.ReadAllText(Application.dataPath + "/highscores.txt");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         highscores.highscoreEntryList.Add(highscoreEntry);
 
         string json = JsonUtility.ToJson(highscores);
-        //PlayerPrefs.SetString("HighscoreTable", json);
-        //PlayerPrefs.Save();
-
-        File.WriteAllText(Application.dataPath + "/highscores.txt", jsonString);
+        PlayerPrefs.SetString("HighscoreTable", json);
+        PlayerPrefs.Save();
     }
 
     private class Highscores
