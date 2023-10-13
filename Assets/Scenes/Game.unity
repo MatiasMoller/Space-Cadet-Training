@@ -4212,7 +4212,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248795515}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cb17385a3d962fa4288f962c475924f0, type: 3}
@@ -5569,6 +5569,10 @@ MonoBehaviour:
   crouching: 0
   sprinting: 0
   crouchTimer: 0
+  walkSound: {fileID: 8300000, guid: 658a4a8645ddfdc4a94c47356a4371bb, type: 3}
+  sprintSound: {fileID: 8300000, guid: 658a4a8645ddfdc4a94c47356a4371bb, type: 3}
+  jumpSound: {fileID: 8300000, guid: 647658a0dbf8e5343801c733323577ce, type: 3}
+  sprintPitchMultiplier: 1.5
 --- !u!114 &1608732917
 MonoBehaviour:
   m_ObjectHideFlags: 0
