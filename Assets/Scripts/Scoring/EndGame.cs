@@ -44,6 +44,8 @@ namespace MathewHartley
             }
             GameObject playerCharacter = GameObject.Find("Player");
             playerCharacter.GetComponent<InputManager>().enabled = false;
+            GameObject playerGun = GameObject.Find("SciFiGunLightBlue");
+            playerGun.GetComponent<GunSystem>().enabled = false;
         }
 
         public void SubmitScore()
