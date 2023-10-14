@@ -4335,7 +4335,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248795515}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8a6c7322e13ac824389091f0d731092b, type: 3}
@@ -5571,7 +5571,7 @@ MonoBehaviour:
   crouchTimer: 0
   walkSound: {fileID: 8300000, guid: 658a4a8645ddfdc4a94c47356a4371bb, type: 3}
   sprintSound: {fileID: 8300000, guid: 658a4a8645ddfdc4a94c47356a4371bb, type: 3}
-  jumpSound: {fileID: 8300000, guid: 647658a0dbf8e5343801c733323577ce, type: 3}
+  jumpSound: {fileID: 8300000, guid: b7451fdfdc01d1b4da065fe60a45d0e7, type: 3}
   sprintPitchMultiplier: 1.5
 --- !u!114 &1608732917
 MonoBehaviour:
@@ -7743,6 +7743,10 @@ PrefabInstance:
     - target: {fileID: 3669277885112385311, guid: 10ea538ec801c8a4ab08107088e3403f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056529279457603757, guid: 10ea538ec801c8a4ab08107088e3403f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397065615782196052, guid: 10ea538ec801c8a4ab08107088e3403f, type: 3}
       propertyPath: timer
