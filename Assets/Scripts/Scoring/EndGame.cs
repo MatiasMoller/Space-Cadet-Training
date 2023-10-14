@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using LootLocker.Requests;
 
 namespace MathewHartley
 {
@@ -9,25 +10,26 @@ namespace MathewHartley
     {
         [Header("Highscore Objects")]
         public GameObject scoreTable;
-        public HighscoreTableV2 highscoreTable;
 
         [Header("Timer Objects")]
         public TextMeshProUGUI finalTimeText;
         public GameTimer gameTimer;
         private float playerTime;
+        private int scoreToSubmit;
 
         [Header("Player Input")]
-        private string playerName;
         public GameObject inputWindow;
         public TMP_InputField playerInput;
 
         [Header("Managers")]
         public SceneLoader endGame;
+        public Leaderboard leaderboard;
 
         private void OnTriggerEnter(Collider other)
         {
             //Round the timer to 2 decimal places
             playerTime = Mathf.Round(gameTimer.currentTime * 100f) /100f;
+            scoreToSubmit = (int)playerTime;
 
             inputWindow.SetActive(true);
             Cursor.visible = true;
@@ -44,12 +46,13 @@ namespace MathewHartley
             }
             GameObject playerCharacter = GameObject.Find("Player");
             playerCharacter.GetComponent<InputManager>().enabled = false;
+            GameObject playerGun = GameObject.Find("SciFiGunLightBlue");
+            playerGun.GetComponent<GunSystem>().enabled = false;
         }
 
         public void SubmitScore()
         {
-            playerName = playerInput.text;
-            highscoreTable.AddHighscoreEntry(playerTime, playerName);
+            leaderboard.SubmitScoreRoutine(scoreToSubmit);
             Debug.Log("Score Submitted");
             inputWindow.SetActive(false);
             StartCoroutine(ShowScores());
@@ -57,12 +60,11 @@ namespace MathewHartley
 
         IEnumerator ShowScores()
         {
-            Debug.Log("Started Coroutine at timestamp : " + Time.time);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            leaderboard.FetchTopHighscoresRoutine();
             scoreTable.SetActive(true);
             yield return new WaitForSeconds(10);
-            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
             endGame.LoadEnd();
         }
     }
