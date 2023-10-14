@@ -30,8 +30,8 @@ namespace MathewHartley
             playerTime = Mathf.Round(gameTimer.currentTime * 100f) /100f;
 
             inputWindow.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
             if (gameTimer.hasFormat)
             {
                 finalTimeText.text = playerTime.ToString(gameTimer.timeFormats[gameTimer.format]);
@@ -46,22 +46,24 @@ namespace MathewHartley
             playerCharacter.GetComponent<InputManager>().enabled = false;
             GameObject playerGun = GameObject.Find("SciFiGunLightBlue");
             playerGun.GetComponent<GunSystem>().enabled = false;
-        }
 
-        public void SubmitScore()
-        {
-            playerName = playerInput.text;
-            highscoreTable.AddHighscoreEntry(playerTime, playerName);
             StartCoroutine(ShowScores());
         }
+
+        //public void SubmitScore()
+        //{
+        //    playerName = playerInput.text;
+        //    highscoreTable.AddHighscoreEntry(playerTime, playerName);
+        //    StartCoroutine(ShowScores());
+        //}
 
 
         IEnumerator ShowScores()
         {
-            inputWindow.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            scoreTable.SetActive(true);
+            ////inputWindow.SetActive(false);
+            //Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
+            //scoreTable.SetActive(true);
             Debug.Log("Started Coroutine at timestamp : " + Time.time);
             yield return new WaitForSeconds(10);
             Debug.Log("Finished Coroutine at timestamp : " + Time.time);
