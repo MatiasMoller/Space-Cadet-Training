@@ -23,7 +23,7 @@ public class Trainer : MonoBehaviour
     public void SpawnTarget()
     {
         float randomX = Random.Range(-6f, 6f);
-        float randomY = Random.Range(-4f, 1f);
+        float randomY = Random.Range(-3f, 1f);
         float randomZ = Random.Range(-67f, -77f);
 
         Vector3 randomSpawn = new Vector3(randomX, randomY, randomZ);
@@ -56,9 +56,10 @@ public class Trainer : MonoBehaviour
     public void SpawnTarget3()
     {
         float randomX = Random.Range(-43f, -23f);
-        float randomY = Random.Range(10f, 15f);
+        float randomY = Random.Range(14f, 19f);
         float randomZ = Random.Range(-43f, -23f);
         Vector3 randomSpawn3 = new Vector3(randomX, randomY, randomZ);
+        //Vector3 randomSpawn3Particle = new Vector3(randomSpawn3.x, randomSpawn3.y + 32f, randomSpawn3.z);  
 
         SpawnParticleEffect(randomSpawn3); // Call the method to spawn the particle effect at the target position
 
