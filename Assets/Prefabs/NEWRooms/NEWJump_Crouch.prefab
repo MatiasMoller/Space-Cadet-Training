@@ -2510,6 +2510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2952442841424532177}
     m_Modifications:
+    - target: {fileID: 5448099900345077363, guid: d38e19e5de803614aaa88f8557e5b580, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7530530771095737229, guid: d38e19e5de803614aaa88f8557e5b580, type: 3}
       propertyPath: m_Name
       value: ExitLights

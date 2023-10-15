@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 1468760774743527772}
   - component: {fileID: 9032535605141248394}
   - component: {fileID: 5046595472183886576}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RangeTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 2825885618975057207}
   - component: {fileID: 9026756268277204290}
   - component: {fileID: 1685115215408298394}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EndGameTrigger
   m_TagString: Stop Timer
   m_Icon: {fileID: 0}
