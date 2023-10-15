@@ -16,6 +16,13 @@ TagManager:
   - Gate1
   - Gate2
   - Gate3
+  - Gate4
+  - Gate5
+  - Gate6
+  - Gate7
+  - Gate8
+  - Gate9
+  - EndGoal
   layers:
   - Default
   - TransparentFX
