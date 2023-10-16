@@ -73,7 +73,7 @@ namespace MathewHartley
             //Cursor.lockState = CursorLockMode.Locked;
             //scoreTable.SetActive(true);
             Debug.Log("Started Coroutine at timestamp : " + Time.time);
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
             Debug.Log("Finished Coroutine at timestamp : " + Time.time);
             endGame.LoadEnd();
         }
