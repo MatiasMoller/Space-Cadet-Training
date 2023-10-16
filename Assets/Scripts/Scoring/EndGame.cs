@@ -16,6 +16,11 @@ namespace MathewHartley
         public GameTimer gameTimer;
         private float playerTime;
 
+        [Header("Player Objects")]
+        public GameObject playerCharacter;
+        public GameObject playerGun;
+
+
         [Header("Player Input")]
         private string playerName;
         public GameObject inputWindow;
@@ -46,9 +51,8 @@ namespace MathewHartley
                 finalTimeText.text = playerTime.ToString();
                 Debug.Log("Run Time: " + playerTime.ToString());
             }
-            GameObject playerCharacter = GameObject.Find("Player");
+
             playerCharacter.GetComponent<InputManager>().enabled = false;
-            GameObject playerGun = GameObject.Find("SciFiGunLightBlue");
             playerGun.GetComponent<GunSystem>().enabled = false;
 
             StartCoroutine(ShowScores());

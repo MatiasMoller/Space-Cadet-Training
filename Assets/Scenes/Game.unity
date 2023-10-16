@@ -1851,6 +1851,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &651914924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6839183712311157455, guid: b51dfd6c71d516247aedbb726dbacbb1, type: 3}
+  m_PrefabInstance: {fileID: 2378235927297928343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &663413437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5832,6 +5837,11 @@ RectTransform:
   m_AnchoredPosition: {x: -824, y: 408}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1644753907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6425986958632481492, guid: b51dfd6c71d516247aedbb726dbacbb1, type: 3}
+  m_PrefabInstance: {fileID: 2378235927297928343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1701142579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7273,6 +7283,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1590495001}
     - target: {fileID: 1685115215408298394, guid: d1e5d9d59d14ecf409d5cab5518b8550, type: 3}
+      propertyPath: playerGun
+      value: 
+      objectReference: {fileID: 1644753907}
+    - target: {fileID: 1685115215408298394, guid: d1e5d9d59d14ecf409d5cab5518b8550, type: 3}
       propertyPath: scoreTable
       value: 
       objectReference: {fileID: 1796995714}
@@ -7296,6 +7310,10 @@ PrefabInstance:
       propertyPath: victoryFanfare
       value: 
       objectReference: {fileID: 7871106524716873256}
+    - target: {fileID: 1685115215408298394, guid: d1e5d9d59d14ecf409d5cab5518b8550, type: 3}
+      propertyPath: playerCharacter
+      value: 
+      objectReference: {fileID: 651914924}
     - target: {fileID: 5375947994972698362, guid: d1e5d9d59d14ecf409d5cab5518b8550, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
