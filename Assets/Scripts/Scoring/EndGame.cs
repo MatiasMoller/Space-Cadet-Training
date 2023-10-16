@@ -24,12 +24,16 @@ namespace MathewHartley
         [Header("Managers")]
         public SceneLoader endGame;
 
+        [Header("Audio")]
+        public AudioSource victoryFanfare;
+
         private void OnTriggerEnter(Collider other)
         {
             //Round the timer to 2 decimal places
             playerTime = Mathf.Round(gameTimer.currentTime * 100f) /100f;
 
             inputWindow.SetActive(true);
+            victoryFanfare.Play();
             //Cursor.visible = true;
             //Cursor.lockState = CursorLockMode.None;
             if (gameTimer.hasFormat)
